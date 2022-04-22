@@ -5,12 +5,12 @@ class User:
   # empty list where user accounts will be created
   accounts_list = []
   
-  def __init__(self, username, account):
+  def __init__(self, login_account, login_username):
     '''
     _inti_ method that helps us define properties for our objects
     '''
-    self.username = username
-    self.account = account
+    self.login_account = login_account
+    self.login_username = login_username
 
     
         
