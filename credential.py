@@ -1,13 +1,13 @@
-class Credential:
+class Credentials:
   '''
   Class that generates new instances of passwords
   '''
-  credentials_list= []
+  credential_detail= []
 
-  def __init__(self, login_credential):
+  def __init__(self, credential_detail):
     '''
     __init__ method that helps us define properties for our objects
     '''
-    self.login_credential = login_credential
+    self.credential_detail = credential_detail
 
       
