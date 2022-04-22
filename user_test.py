@@ -19,7 +19,14 @@ class TestUser(unittest.TestCase):
     test_init test case to test if the object is initialized properly
     '''
     self.assertEqual(self.new_user.login_account,"Facebook")
-    self.assertEqual(self.new_user.login_username,"James")    
+    self.assertEqual(self.new_user.login_username,"James")  
+
+  def test_save_detail(self):
+    '''
+    test-save-detail test case to test if the detail of the user is saved into user detail list
+    '''    
+    self.new_user.save_detail()
+    self.assertEqual(len(User.user_detail),1)
 
 if __name__ == '__main__':
     unittest.main()    
