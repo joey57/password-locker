@@ -60,6 +60,16 @@ class TestUser(unittest.TestCase):
     '''  
     self.assertEqual(User.display_all_details(),User.user_detail)
 
+  def test_find_account(self):
+    '''
+    test to check if we can find an account using username
+    '''  
+    self.new_user.save_detail()
+    test_account = User("Test","user","3456t")
+    test_account.save_detail()
+    found_account = User.find_by_account("user")
+    self.assertEqual(found_account.username,test_account.username)
+
 
 if __name__ == '__main__':
     unittest.main()    
