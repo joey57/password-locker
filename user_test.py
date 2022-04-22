@@ -54,6 +54,12 @@ class TestUser(unittest.TestCase):
     self.new_user.delete_detail()
     self.assertEqual(len(User.user_detail),1)
 
+  def test_display_all_details(self):
+    '''
+    test_display_all_details test case returns a list of all user details that are saved
+    '''  
+    self.assertEqual(User.display_all_details(),User.user_detail)
+
 
 if __name__ == '__main__':
     unittest.main()    
