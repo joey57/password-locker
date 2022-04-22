@@ -11,13 +11,14 @@ class User:
     '''
     User.user_detail.append(self)
   
-  def __init__(self, account_name, username, password):
+  def __init__(self, account_name, username, password, confirm_password):
     '''
     _inti_ method that helps us define properties for our objects
     '''
     self.account_name = account_name
     self.username = username
     self.password = password
+    self.confirm_password = confirm_password
     
 
   def delete_detail(self):
@@ -33,5 +34,21 @@ class User:
     '''  
     return cls.user_detail
 
-    
+  @classmethod
+  def find_by_username(cls, username):
+    '''
+    method that takes in an account and returns an account that matches
+    '''  
+    for user in cls.user_detail:
+      if user.username == username:
+        return user
+
+  @classmethod
+  def user_exist(cls, username):
+    '''
+    method that checks if a username exists from account list
+    '''  
+    for user in cls.user_detail:
+      if user.username == username:
+        return True
         
