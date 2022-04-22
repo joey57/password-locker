@@ -43,5 +43,17 @@ class TestUser(unittest.TestCase):
     test_user.save_detail()
     self.assertEqual(len(User.user_detail),2)
 
+  def test_delete_detail(self):
+    '''
+    test_delete_detial to test if we can remove user detail from our user detail list
+    '''  
+    self.new_user.save_detail()
+    test_user = User("Test", "user")
+    test_user.save_detail()
+
+    self.new_user.delete_detail()
+    self.assertEqual(len(User.user_detail),1)
+
+
 if __name__ == '__main__':
     unittest.main()    
