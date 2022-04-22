@@ -4,10 +4,10 @@ class Credentials:
   '''
   credentials_list= []
 
-  def __init__(self, login_credentials):
+  def __init__(self, login_credential):
     '''
     __init__ method that helps us define properties for our objects
     '''
-    self.login_credentials = login_credentials
+    self.login_credential = login_credential
 
       
