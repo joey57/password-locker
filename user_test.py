@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
     '''
     set up method to run before each test case
     '''
-    self.new_user = User("Facebook" , "James")
+    self.new_user = User("Instagram" , "James")
 
   def tearDown(self):
     '''
@@ -24,7 +24,7 @@ class TestUser(unittest.TestCase):
     '''
     test_init test case to test if the object is initialized properly
     '''
-    self.assertEqual(self.new_user.login_account,"Facebook")
+    self.assertEqual(self.new_user.login_account,"Instagram")
     self.assertEqual(self.new_user.login_username,"James")  
 
   def test_save_detail(self):
