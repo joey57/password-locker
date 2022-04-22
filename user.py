@@ -24,5 +24,12 @@ class User:
     '''  
     User.user_detail.remove(self)
 
+  @classmethod
+  def display_all_details(cls):
+    '''
+    method that return the user detail list
+    '''  
+    return cls.user_detail
+
     
         
