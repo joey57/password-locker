@@ -28,5 +28,14 @@ class TestUser(unittest.TestCase):
     self.new_user.save_detail()
     self.assertEqual(len(User.user_detail),1)
 
+  def test_save_multiple_detail(self):
+    '''
+    test-save-multiple-detail to check if we can save multiple user objects to our user-detail list
+    '''  
+    self.new_user.save_detail()
+    test_user = User("Test", "user")
+    test_user.save_detail()
+    self.assertEqual(len(User.user_detail),2)
+
 if __name__ == '__main__':
     unittest.main()    
