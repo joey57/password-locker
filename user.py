@@ -4,12 +4,12 @@ class User:
   '''
   user_detail = []
   
-  def __init__(self, login_account, login_username):
+  def __init__(self, username, account):
     '''
     _inti_ method that helps us define properties for our objects
     '''
-    self.login_username = login_username
-    self.login_account = login_account
+    self.username = username
+    self.account = account
 
     
         
