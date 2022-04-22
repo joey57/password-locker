@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
     '''
     set up method to run before each test case
     '''
-    self.new_user = User("Instagram" , "James")
+    self.new_user = User("Instagram", "James", "1234jj")
 
   def tearDown(self):
     '''
@@ -24,8 +24,9 @@ class TestUser(unittest.TestCase):
     '''
     test_init test case to test if the object is initialized properly
     '''
-    self.assertEqual(self.new_user.login_account,"Instagram")
-    self.assertEqual(self.new_user.login_username,"James")  
+    self.assertEqual(self.new_user.account_name,"Instagram")
+    self.assertEqual(self.new_user.username,"James") 
+    self.assertEqual(self.new_user.password,"1234jj") 
 
   def test_save_detail(self):
     '''
@@ -39,7 +40,7 @@ class TestUser(unittest.TestCase):
     test-save-multiple-detail to check if we can save multiple user objects to our user-detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user")
+    test_user = User("Test", "user", "3456t")
     test_user.save_detail()
     self.assertEqual(len(User.user_detail),2)
 
@@ -48,9 +49,8 @@ class TestUser(unittest.TestCase):
     test_delete_detial to test if we can remove user detail from our user detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user")
+    test_user = User("Test", "user", "3456t")
     test_user.save_detail()
-
     self.new_user.delete_detail()
     self.assertEqual(len(User.user_detail),1)
 

@@ -11,12 +11,14 @@ class User:
     '''
     User.user_detail.append(self)
   
-  def __init__(self, login_account, login_username):
+  def __init__(self, account_name, username, password):
     '''
     _inti_ method that helps us define properties for our objects
     '''
-    self.login_account = login_account
-    self.login_username = login_username
+    self.account_name = account_name
+    self.username = username
+    self.password = password
+    
 
   def delete_detail(self):
     '''
