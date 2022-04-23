@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
     '''
     set up method to run before each test case
     '''
-    self.new_user = User("facebook", "watdavid", "123jm" , "123jm")
+    self.new_user = User("James", "Walter", "wally" , "123jw", "123jw")
 
   def tearDown(self):
     '''
@@ -24,10 +24,11 @@ class TestUser(unittest.TestCase):
     '''
     test_init test case to test if the object is initialized properly
     '''
-    self.assertEqual(self.new_user.account_name,"facebook")
-    self.assertEqual(self.new_user.username,"watdavid") 
-    self.assertEqual(self.new_user.password,"123jm") 
-    self.assertEqual(self.new_user.confirm_password,"123jm")
+    self.assertEqual(self.new_user.first_name,"James")
+    self.assertEqual(self.new_user.last_name,"Walter")
+    self.assertEqual(self.new_user.username,"wally") 
+    self.assertEqual(self.new_user.password,"123jw") 
+    self.assertEqual(self.new_user.confirm_password,"123jw")
 
   def test_save_detail(self):
     '''
@@ -41,7 +42,7 @@ class TestUser(unittest.TestCase):
     test-save-multiple-detail to check if we can save multiple user objects to our user-detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user", "123jm","123jm")
+    test_user = User("Test", "user", "usertest","123tu","123tu")
     test_user.save_detail()
     self.assertEqual(len(User.user_detail),2)
 
@@ -50,7 +51,7 @@ class TestUser(unittest.TestCase):
     test_delete_detial to test if we can remove user detail from our user detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user", "123jm","123jm")
+    test_user = User("Test", "user", "usertest","123tu","123tu")
     test_user.save_detail()
     self.new_user.delete_detail()
     self.assertEqual(len(User.user_detail),1)
@@ -67,7 +68,7 @@ class TestUser(unittest.TestCase):
     '''  
     self.new_user.save_detail()
 
-    test_user = User("test","user","3456t", "3456t")
+    test_user = User("test","user","testuser","3456t", "3456t")
     test_user.save_detail()
 
     found_user = User.find_by_username("user")
