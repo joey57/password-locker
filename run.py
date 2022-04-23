@@ -83,7 +83,27 @@ def main():
         print('\n')
         print(f"{user_name} you dont seem to have any account saved yet")
         print('\n')
-      
+
+    elif short_code == '3': 
+      print(f"Enter the username you want to search for")
+      search_username = input()
+      if check_existing_user(search_username):
+        search_username = find_user(search_username) 
+
+        print(dash)
+
+        print(f"Account is {search_username.account_name}.com")
+        print(f"Account username is {search_username.username}")
+        print(f"Account password is {search_username.password} dont give out passwords")
+
+        print(dash)
+
+        print(f"{user_name} what else do you want to do?")
+
+      else:
+        print(f"{user_name} That account does not exist")
+
+        print(f"{user_name} what else do you want to do?")
       
 
    
