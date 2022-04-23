@@ -20,3 +20,10 @@ def display_all_details():
   '''
   return User.display_all_details()
 
+def check_existing_user(username):
+  '''
+  function to check and return existing accounts
+  '''
+  return User.user_exist(username)
+
+  
