@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
     '''
     set up method to run before each test case
     '''
-    self.new_user = User("James", "Walter", "wally" , "123jw", "123jw")
+    self.new_user = User("instagram", "wally" , "123jw", "123jw")
 
   def tearDown(self):
     '''
@@ -24,8 +24,7 @@ class TestUser(unittest.TestCase):
     '''
     test_init test case to test if the object is initialized properly
     '''
-    self.assertEqual(self.new_user.first_name,"James")
-    self.assertEqual(self.new_user.last_name,"Walter")
+    self.assertEqual(self.new_user.account_name,"instagram")
     self.assertEqual(self.new_user.username,"wally") 
     self.assertEqual(self.new_user.password,"123jw") 
     self.assertEqual(self.new_user.confirm_password,"123jw")
@@ -42,7 +41,7 @@ class TestUser(unittest.TestCase):
     test-save-multiple-detail to check if we can save multiple user objects to our user-detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user", "usertest","123tu","123tu")
+    test_user = User("Test", "usertest","123tu","123tu")
     test_user.save_detail()
     self.assertEqual(len(User.user_detail),2)
 
@@ -51,7 +50,7 @@ class TestUser(unittest.TestCase):
     test_delete_detial to test if we can remove user detail from our user detail list
     '''  
     self.new_user.save_detail()
-    test_user = User("Test", "user", "usertest","123tu","123tu")
+    test_user = User("Test", "usertest","123tu","123tu")
     test_user.save_detail()
     self.new_user.delete_detail()
     self.assertEqual(len(User.user_detail),1)
@@ -68,10 +67,10 @@ class TestUser(unittest.TestCase):
     '''  
     self.new_user.save_detail()
 
-    test_user = User("test","user","testuser","3456t", "3456t")
+    test_user = User("test","testuser","3456t", "3456t")
     test_user.save_detail()
 
-    found_user = User.find_by_username("user")
+    found_user = User.find_by_username("testuser")
     self.assertEqual(found_user.username,test_user.username)
 
   # def test_user_exist(self):
