@@ -104,32 +104,18 @@ def main():
         print(f"{user_name} That account does not exist")
 
         print(f"{user_name} what else do you want to do?")
-      
 
-   
+    elif short_code == "4":
+  
+        print("Bye .......")
 
+        break
 
+    else:
+        print("I really didn't get that. Please use the correct code")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+        print(f"{user_name} what else do you want to do?")
+          
 if __name__ == "__main__":
   main()          
       
