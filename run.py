@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.10.4
 from user import User
 import getpass
 import random
@@ -18,21 +18,21 @@ def create_account(account_name,username,password,confirm_password):
 def save_details(user):
 
     """
-    function to save save_details
+    function to save_details
     """
     user.save_detail()
 
 def display_all_details():
 
     """
-    function used to return all saved save_details
+    function used to return all saved details
     """
     return User.display_all_details()
 
 def check_existing_user(username):
 
     """
-    a function that is used to check and return all exissting accounts
+    function that is used to check and return all existing accounts
     """
 
     return User.user_exist(username)
@@ -40,7 +40,7 @@ def check_existing_user(username):
 def find_user(username):
 
     """
-    the function is used check details from the saved save_details
+    function is used check details from save_details
     """
 
     return User.find_by_username(username)
@@ -74,7 +74,7 @@ def main():
 
     while True:
 
-        list =('''
+        list =(''' use the following short codes:
         1-Register a new account
         2-Display accounts
         3-Find accounts
