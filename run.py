@@ -11,11 +11,11 @@ def create_account(account_name, username, password, confirm_password):
   new_user = User(account_name, username, password,confirm_password)
   return new_user
 
-def save_details(user):
+def save_details():
   '''
   function to save details
   '''
-  user.save_detail()
+  User.save_detail()
 
 def display_all_details():
   '''
@@ -33,7 +33,13 @@ def find_user(username):
   '''
   function to check details from save_details
   '''
-  return User.user.find_by_username(username)
+  return User.find_by_username(username)
+
+def generatePassword(num):
+  genpas = ''
+  for n in range(num):
+    x = random.randint(0,94)
+  return genpas  
 
 def main():
   print("Welcome this is password locker!")
