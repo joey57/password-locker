@@ -31,8 +31,10 @@ def check_existing_user(username):
 def main():
   print("Welcome this is password locker!")
   print('\n')
+  print("login")
+  print("\n")
 
-  print("What is your name?")
+  print("What is your username?")
   user_name = input()
 
   print(f"Hello {user_name}, welcome to password locker, what would you like to do")
@@ -42,38 +44,33 @@ def main():
     print("Use the following short codes: 1- register a new account, 2- display account, 3- find contacts, 4-exit password locker")
 
     short_code = input().lower()
+
     if short_code == '1':
-      print("Hey new user")
-      print("-"*10)
+      print(f"{user_name} please fill int the following")
+
       print("First name")
       f_name = input()
-      print("Last name")
-      l_name = input()
+      print("-"*10)
+      print("account name")
+      account_name = input()
+
       print("username")
-      print('\n')
+      username = input()
+      
 
       print("Do you want a randomly generated password?")
       ans = input()
-      ans = input()
-      if ans:
-         WORDS = ("{user_name}", "{user_name}123", "{user_name}zyx", "{user_name}098", "{user_name}567",  "{user_name}hfg")
-         word = random.choice(WORDS)
-         correct = word
-         jumble = ""
-         while word:
-              position = random.randrange(len(word))
-              word = word[:position] + word[(position + 1):]
-         print(word[position])
-      else:
-        password = getpass.getpass('password:')
-        print("*****")
-        confirm_password = getpass.getpass('confirm_password')
-        print("*****")
 
-      save_details(create_account(f_name,l_name,password,confirm_password)) 
+      password = getpass.getpass('password:')
+      print("*****")
+      confirm_password = getpass.getpass('confirm password:')
+      print("*****")
+      save_details(create_account(account_name,password,confirm_password)) 
       print('\n')
-      print(f"New user {f_name} {password} account created and password save")
+      print(f"{user_name} {account_name} account of {username} created and password save")
       print('\n')
+
+      print(f"{user_name} what else do you want to do")
       
 if __name__ == "__main__":
   main()          
