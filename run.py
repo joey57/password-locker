@@ -2,6 +2,7 @@ from getpass import getpass
 import random
 from user import User
 from credential import Credentials
+dash = '-'*60
 
 def create_account(account_name, username, password, confirm_password):
   '''
@@ -27,6 +28,12 @@ def check_existing_user(username):
   function to check and return existing accounts
   '''
   return User.user_exist(username)
+
+def find_user(username):
+  '''
+  function to check details from save_details
+  '''
+  return User.user.find_by_username(username)
 
 def main():
   print("Welcome this is password locker!")
