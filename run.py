@@ -71,6 +71,44 @@ def main():
       print('\n')
 
       print(f"{user_name} what else do you want to do")
+
+    elif short_code == '2':
+      if display_all_details():
+        print(f"{user_name} here is a list of all your accounts")
+        print('\n')
+        for user in display_all_details():
+          print(f"{user.account_name} {user.username}.......{user.password}")
+          print('\n')
+      else:
+        print('\n')
+        print(f"{user_name} you dont seem to have any account saved yet")
+        print('\n')
+      
+      
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
 if __name__ == "__main__":
   main()          
