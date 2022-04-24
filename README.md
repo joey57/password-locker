@@ -19,9 +19,9 @@ This is a python app that allows users to save password, save their accounts and
 
 | Behavior        | Result |
 | ------------- |:----:|
-| User types in 1 when requested | User is prompted to input account details |
-| User types in 2 | User is able to view all accounts created by him/her|
-| User types in 3 | User is able to search for saved accounts using their username|
+| User types in 1 when requested | User prompted to input account details |
+| User types in 2 | User views accounts created|
+| User types in 3 | User searchs for saved accounts using their username|
 | User types in 4 | The application closes|
 
 ## TDD
