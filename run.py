@@ -120,8 +120,7 @@ def main():
                 print(f"{user_name} {account_name} account of {username} created and password saved")
 
                 print ('\n')
-
-
+                
             elif ans == 'no':
                 password = getpass.getpass('password:')
                 print("*********")
@@ -138,7 +137,6 @@ def main():
                 print(f"Hey {user_name}")
                 print(f"Your account name is {account_name}.com")
                 print(f"Your account username is {username}")
-                print("passwords encripted but can be viwed using option 2 / 3")
 
                 print(dash)
 
