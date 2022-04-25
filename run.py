@@ -109,14 +109,19 @@ def main():
             ans = input().lower()
 
             if ans == 'yes':
+                length = int(input('\nEnter the length of password:'))
+                lower = string.ascii_lowercase
+                upper = string.ascii_uppercase
+                num = string.digits
+                symbols = string.punctuation
 
-                genpas = print(generatePassword(10))
+                all = lower + upper + num + symbols
+                temp = random.sample(all, length)
+                password = " ".join(temp)
+                print(password)
 
-                save_details(create_account(account_name,username,password,confirm_password))
-
-                print ('\n')
-
-
+                # save_details(create_account(account_name,username,password,confirm_password))
+                # print ('\n')
                 print(f"{user_name} {account_name} account of {username} created and password saved")
 
                 print ('\n')
