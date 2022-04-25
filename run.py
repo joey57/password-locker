@@ -122,7 +122,7 @@ def main():
 
                 # save_details(create_account(account_name,username,password,confirm_password))
                 # print ('\n')
-                print(f"{user_name} {account_name} account of {username} created and password saved")
+                print(f"{user_name} {account_name} your account {username} is created and password saved")
 
                 print ('\n')
                 
